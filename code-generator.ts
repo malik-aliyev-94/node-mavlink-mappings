@@ -78,7 +78,7 @@ function matchTextToWidth(s: string, width = 100) {
 
   // cut text into max 100 character lines and remove any persisting whitespaces
   const result = s
-    .replace(/\s*(?:(\S{100})|([\s\S]{1,100})(?!\S))/g, ($0,$1,$2) => $1 ? $1 + '-\n' : $2 + '\n')
+    .replace(/\s*(?:(\S{100})|([\s\S]{1,100})(?!\S))/g, ($0, $1, $2) => $1 ? $1 + '-\n' : $2 + '\n')
     .split('\n')
     .map(line => line.trim())
 
@@ -95,7 +95,7 @@ function matchTextToWidth(s: string, width = 100) {
 class Writter {
   lines = []
 
-  constructor() {}
+  constructor() { }
 
   write(s = '') {
     this.lines.push(s)
@@ -110,7 +110,7 @@ function generate(name: string, obj: any, output: Writter) {
   // ------------------------------------------------------------------------
 
   // parse XML data
-  if (obj.mavlink.enums[0]?.enum) {
+  if (obj.mavlink?.enums?.[0]?.enum) {
     const enums = obj.mavlink.enums[0].enum.map(xml => ({
       name: makeClassName(xml.$.name),
       source: {
@@ -148,7 +148,7 @@ function generate(name: string, obj: any, output: Writter) {
           } else {
             for (let i = 0; i < Math.min(acc.length, name.length); i++) {
               if (acc[i] !== name[i]) return acc.substr(0, i)
-          }
+            }
           }
           return acc
         }, '')
@@ -187,7 +187,7 @@ function generate(name: string, obj: any, output: Writter) {
 
       // if the trimmed value starts with a digit revert to xml source
       entry.values.forEach(value => {
-        if ([ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ].includes(value.name[0])) {
+        if (['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].includes(value.name[0])) {
           value.name = value.source.name
         }
       })
@@ -348,9 +348,9 @@ function generate(name: string, obj: any, output: Writter) {
       // to denote that it is read-only (crazy stuff)
       const fieldType = field.source.type === 'uint8_t_mavlink_version' ? 'uint8_t' : field.itemType
       const fieldName = field.source.name
-      buffer = Buffer.concat([ buffer, Buffer.from(`${fieldType} ${fieldName} `) ])
+      buffer = Buffer.concat([buffer, Buffer.from(`${fieldType} ${fieldName} `)])
       if (field.arrayLength) {
-        buffer = Buffer.concat([ buffer, Buffer.from([ field.arrayLength ])])
+        buffer = Buffer.concat([buffer, Buffer.from([field.arrayLength])])
       }
     }
     const crc = x25crc(buffer)
