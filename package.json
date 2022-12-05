@@ -22,7 +22,9 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [ "dist" ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist *.xml",
     "download": "ts-node download.ts",
@@ -43,39 +45,39 @@
   },
   "mappings": [
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/minimal.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/minimal.xml",
       "name": "minimal"
     },
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/common.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/common.xml",
       "name": "common"
     },
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/ardupilotmega.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/ardupilotmega.xml",
       "name": "ardupilotmega"
     },
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/uAvionix.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/uAvionix.xml",
       "name": "uavionix"
     },
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/icarous.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/icarous.xml",
       "name": "icarous"
     },
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/ASLUAV.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/ASLUAV.xml",
       "name": "asluav"
     },
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/development.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/development.xml",
       "name": "development"
     },
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/ualberta.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/ualberta.xml",
       "name": "ualberta"
     },
     {
-      "url": "https://raw.githubusercontent.com/mavlink/mavlink/master/message_definitions/v1.0/storm32.xml",
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/storm32.xml",
       "name": "storm32"
     }
   ]
