@@ -79,6 +79,10 @@
     {
       "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/storm32.xml",
       "name": "storm32"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Garakhan/mavlink/jet_new/message_definitions/v1.0/synap.xml",
+      "name": "synap"
     }
   ]
 }
